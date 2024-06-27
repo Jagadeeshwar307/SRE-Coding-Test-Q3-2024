@@ -1,0 +1,7 @@
+Somo logic Query 
+_sourceCategory=your/lo/source
+|json feild=_raw"response_time"
+|where endpoint="/api/data' and response time>3000
+|count by _timeslice
+|where_count > 5
+|sort by _timeslice
